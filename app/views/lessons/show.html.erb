@@ -1,0 +1,19 @@
+<article class="lesson">
+  <section class="lesson-head">
+    <h2><%= link_to @lesson.title, lesson_path(@lesson) %></h2>
+
+    <small>
+      <time> <%= @lesson.created_at.to_date.strftime("%d %B, %Y") %></time>
+      |
+      <%= link_to 'Изменить', edit_lesson_path(@lesson) %>
+      |
+      <%= link_to 'Удалить', lesson_path(@lesson), method: :delete, data: { confirm: 'Вы уверены?'}  %>
+    </small>
+  </section>
+
+  <section class="lesson-notes">
+    <%= image_tag @lesson.attachment.url(:large), class: 'img-show' if @lesson.attachment?  %>
+    <%= @lesson.notes %>
+  </section>
+
+</article>

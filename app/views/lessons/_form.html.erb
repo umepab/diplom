@@ -1,0 +1,36 @@
+
+<% if @lesson.errors.any? %>
+    <div class="alert alert-danger">
+      <h5> <%= t('common.errors') %></h5>
+      <ul>
+        <% @lesson.errors. full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+
+<%= form_for @lesson, html: {multipartt: true} do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :notes %>
+      <%= f.text_area :notes, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.file_field :attachment, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit t('.submit', action: @lesson.new_record? ? t('common.create') : t('common.edit')), class: 'btn btn-primary' %>
+      <%= link_to t('common.back'), :back, class: 'btn btn-outline-secondary'  %>
+
+    </div>
+
+
+<% end %>

@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      lessons: 'Предмет'
+    attributes:
+      lesson:
+        title: 'Название'
+        notes: 'Примечания'
