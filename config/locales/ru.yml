@@ -10,6 +10,7 @@ ru:
   posts:
     index:
       title: 'Предметы'
+  admin:
     posts:
       new:
         title: 'Новый предмет'
@@ -17,7 +18,7 @@ ru:
         title: 'Редактирование предмета'
       form:
         submit:
-          '%{action} предмет'
+          '%{action} статью'
     categories:
       index:
         title: 'Категории'

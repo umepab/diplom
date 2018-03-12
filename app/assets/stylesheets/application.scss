@@ -12,9 +12,13 @@
  *
  *= require_tree .
  *= require_self
+*= require jquery.ui.datepicker
+
  */
 
 @import "bootstrap";
+
+
 
 nav{
   font-family: 'Open Sans', sans-serif;

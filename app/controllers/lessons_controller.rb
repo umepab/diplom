@@ -9,6 +9,13 @@ class LessonsController < ApplicationController
   def show
   end
 
+
+  def calendar
+    @lessons = Lesson.all
+    @lessons_by_date = @lessons.group_by(&:created_at)
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+  end
+
   def new
     @lesson = Lesson.new
   end
@@ -42,7 +49,7 @@ end
   private
 
   def lesson_params
-    params.require(:lesson).permit(:title, :notes, :attachments)
+    params.require(:lesson).permit(:title, :notes, :attachments )
   end
 
   def short_params

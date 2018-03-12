@@ -60,8 +60,9 @@ gem 'jquery-rails'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether'
 end
-gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+
 

@@ -11,8 +11,8 @@
     </small>
   </section>
 
-  <section class="lesson-notes">
-    <%= image_tag @lesson.attachment.url(:large), class: 'img-show' if @lesson.attachment?  %>
+  <section class="lesson-notes" data-toggle="lightbox" data-gallery="example-gallery" >
+    <%= image_tag @lesson.attachments.url(:large), :data => {:gallery => 'gallery'}, class: 'img-show' if @lesson.attachments?  %>
     <%= @lesson.notes %>
   </section>
 

@@ -1,5 +1,7 @@
 {
   "name": "diplom",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "lightbox2": "^2.10.0"
+  }
 }
