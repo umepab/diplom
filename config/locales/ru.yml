@@ -7,25 +7,23 @@ ru:
   will_paginate:
     previous_label: '&larr; Туда'
     next_label: 'Сюда &rarr;'
-  posts:
+  lessons:
     index:
       title: 'Предметы'
-  admin:
-    posts:
-      new:
-        title: 'Новый предмет'
-      edit:
-        title: 'Редактирование предмета'
-      form:
-        submit:
+    new:
+      title: 'Новый предмет'
+    edit:
+      title: 'Редактирование предмета'
+    form:
+      submit:
           '%{action} статью'
-    categories:
-      index:
-        title: 'Категории'
-      new:
-        title: 'Новая категория'
-      edit:
-        title: 'Редактирование категории'
-      form:
-        submit:
-          '%{action} категорию'
+  groups:
+    index:
+      title: 'Группы'
+    new:
+      title: 'Новая группа'
+    edit:
+      title: 'Редактирование группы'
+    form:
+      submit:
+          '%{action} группу'
