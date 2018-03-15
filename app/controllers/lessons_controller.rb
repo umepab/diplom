@@ -50,7 +50,7 @@ end
   private
 
   def lesson_params
-    params.require(:lesson).permit(:title, :notes, :attachments )
+    params.require(:lesson).permit(:title, :notes, :attachments, :group_id )
   end
 
   def short_params
