@@ -1,15 +1,10 @@
 <div id="lessons">
-  <h2 id="month">
-    <%= link_to "<", date: @date.prev_month %>
-    <%= @date.strftime("%B %Y") %>
-    <%= link_to ">", date: @date.next_month %>
-  </h2>
-  <%= calendar @date do |date| %>
+  <%= calendar do |date| %>
       <%= date.day %>
       <% if @lessons_by_date[date] %>
           <ul>
             <% @lessons_by_date[date].each do |lesson| %>
-                <li><%= link_to lesson.name, lesson %></li>
+                <li><%= link_to lesson.title, lesson %></li>
             <% end %>
           </ul>
       <% end %>

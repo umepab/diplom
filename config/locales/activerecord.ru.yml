@@ -6,3 +6,5 @@ ru:
       lesson:
         title: 'Название'
         notes: 'Примечания'
+      group:
+        name: 'Название'
