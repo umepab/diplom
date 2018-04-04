@@ -16,7 +16,7 @@ ru:
       title: 'Редактирование предмета'
     form:
       submit:
-          '%{action} статью'
+          '%{action} предмет'
   groups:
     index:
       title: 'Группы'

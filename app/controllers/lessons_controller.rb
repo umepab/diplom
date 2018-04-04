@@ -1,5 +1,7 @@
 class LessonsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:create, :edit, :destroy]
+
   before_action :short_params, only: [:show, :edit, :update, :destroy]
 
   def index

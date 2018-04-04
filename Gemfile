@@ -64,5 +64,11 @@ gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'ancestry'
+gem 'devise'
+gem "letter_opener"
+gem 'nested_form_fields'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 

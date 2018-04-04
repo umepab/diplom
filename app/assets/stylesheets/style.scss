@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/janko-ferlic-174927-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login {
+  background-color: white;
+  border-radius: 8px;
+  width: 320px;
+  height: 240px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -120px 0 0 -160px;
+  padding: 16px;
+}
+
+.email label, .password label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.email input, .password input {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+}
+
+.enter {
+  float: right;
+  padding: 12px;
+  background-color: dodgerblue;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.navbar {
+  width: 100%;
+  padding: 16px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.nav {
+  float: right;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    float: left;
+    padding: 8px;
+    a {
+      text-decoration: none;
+      color: #333;
+      &:hover {
+        color: dodgerblue;
+        display: block;
+      }
+    }
+  }
+}
+
+.logo {
+  float: left;
+  padding: 8px;
+}
