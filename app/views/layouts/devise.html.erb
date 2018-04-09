@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <title>Вход</title>
+</head>
+<body>
+<section>
+<div class="navbar clearfix">
+  <div class="logo"><%=image_tag 'logo_247x48.png' %></div>
+  <ul class="nav clearfix">
+    <li><a href="">Главная</a></li>
+    <li><a href="">Журнал</a></li>
+    <li><a href="">Регистрация</a></li>
+  </ul>
+</div>
+
+        <%= yield %>
+</section>
+</body>
+</html>

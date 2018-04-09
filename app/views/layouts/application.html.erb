@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<div>
   <head>
     <title>Diplom</title>
     <%= csrf_meta_tags %>
@@ -11,57 +10,21 @@
   </head>
 
 
-  <nav class="navbar navbar-light bg-faded" >
-    <a href="<%=lessons_path%>">
-      <%= image_tag 'logo_247x48.png' %>
-    </a>
-    <% if user_signed_in? %>
-    <ul class="nav justify-content-end "  >
-      <li class="nav-item" style="border: solid 2.5px #d31e1e; border-radius: 8px">
-        Михаил Юрьевич
-      </li>
-      <li class="nav-item" style="border: solid 2.5px #2b4c8e; border-radius: 50%">
-            <%= image_tag 'default_avatar_40x40.png', height: 40, class: 'rounded-circle' %>
-      </li>
-      <li class="nav-item">
-           <%= link_to 'Новый предмет', new_lesson_path, class: 'btn btn-outline-primary pull-xs-right' %>
-      </li>
-      <div class="btn-group">
-        <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
-      </div>
-    </ul>
-      </nav>
-      <% else %>
+<body>
+        <div class="navbar clearfix">
+          <div class="logo"><%= image_tag 'logo_247x48.png' %></div>
+          <ul class="nav clearfix">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Журнал</a></li>
+            <li><a href="<% new_user_registration_path%>">Регистрация</a></li>
+            <li><a href="<% new_user_session_path%>">Вход</a></li>
 
-    </ul>
-      <div class="btn-toolbar pull-right">
-        <div class="btn-group">
-          <%= link_to "Регистрация", new_user_registration_path, class: "btn btn-default navbar-btn" %>
-        </div>
-        <div class="btn-group">
-          <%= link_to "Войти", new_user_session_path, class: "btn btn-default navbar-btn" %>
-        </div>
-
-      </nav>
-
-  </div>
-      </div>
-      <% end %>
-    <div class="btn-toolbar pull-right">
-      <div class="btn-group">
-        <%= link_to "Факультеты", faculties_path, class: "btn btn-default navbar-btn" %>
-      </div>
-      <div class="btn-group">
-        <%= link_to "Группы", groups_path, class: "btn btn-default navbar-btn" %>
-      </div>
-      <div class="btn-group">
-        <%= link_to "Специальности", specialities_path, class: "btn btn-default navbar-btn" %>
-      </div>
-      <div class="btn-group">
-        <%= link_to "Расписание", '', class: "btn btn-default navbar-btn" %>
-      </div>
-
-    </div>
+            <% if user_signed_in? %>
+            <li><a href="<% destroy_user_session_path%>">Выход</a></li>
+            <li><a href="<% new_lesson_path%>">Новый предмет</a></li>
+                <% end%>
+                </ul>
+              </div>
 
   <div class="container main">
     <div class="row">
