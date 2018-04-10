@@ -1,4 +1,4 @@
-body {
+body.devise {
   margin: 0;
   padding: 0;
   background: url("janko-ferlic-174927-unsplash.jpg");
@@ -17,7 +17,7 @@ body {
   background-color: white;
   border-radius: 8px;
   width: 320px;
-  height: 240px;
+  height: 400px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -87,4 +87,8 @@ body {
 .logo {
   float: left;
   padding: 8px;
+}
+
+.shared {
+  padding-top: 46px;
 }

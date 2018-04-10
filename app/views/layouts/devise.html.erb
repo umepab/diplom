@@ -9,18 +9,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
   <title>Вход</title>
 </head>
-<body>
+<body class="devise">
 <section>
-<div class="navbar clearfix">
-  <div class="logo"><%=image_tag 'logo_247x48.png' %></div>
-  <ul class="nav clearfix">
-    <li><a href="">Главная</a></li>
-    <li><a href="">Журнал</a></li>
-    <li><a href="">Регистрация</a></li>
-  </ul>
-</div>
+  <div class="navbar clearfix">
+    <div class="logo"><%= image_tag 'logo_247x48.png' %></div>
+    <ul class="nav clearfix">
 
-        <%= yield %>
+      <% if user_signed_in? %>
+        <%= link_to 'Новый предмет', new_lesson_path, class: "btn btn-default navbar-btn"  %>
+        <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
+      <% else %>
+        <%= link_to "Регистрация", new_user_registration_path, class: "btn btn-default navbar-btn" %>
+        <%= link_to "Войти", new_user_session_path, class: "btn btn-default navbar-btn" %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="login">
+    <%= yield %>
+  </div>
 </section>
 </body>
 </html>
