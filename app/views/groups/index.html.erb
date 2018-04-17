@@ -18,6 +18,10 @@
       <tr>
         <td><%= index + 1 %></td>
         <td><%= group.name %></td>
+
+
+
+
         <td>
           <%= link_to 'Изменить', edit_group_path(group), class: 'btn btn-outline-primary btn-sm'  %>
           <%= link_to 'Удалить', method: :delete, data: {confirm: 'Вы уверены?'}, class: 'btn btn-outline-primary btn-sm'  %>

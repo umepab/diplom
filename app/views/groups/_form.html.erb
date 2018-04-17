@@ -18,12 +18,9 @@
     </div>
 
   <div class="form-group">
-    <%= f.fields_for :faculties do |s| %>
-      <%= s.label :Факультет %>
-      <%= s.collection_select :faculty_id, Faculty.order(:title), :id, :name, {include_blank: true}, class: 'form-control'  %>
-      </div>
-    <% end %>
-
+    <%= f.label :faculty_id %>
+    <%= f.collection_select :faculty_id, Faculty.order(:title), :id, :title, {include_blank: true}, class: 'form-control' %>
+  </div>
 
   <div class="form-group">
     <%= f.fields_for :speciality do |s| %>

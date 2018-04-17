@@ -1,6 +1,4 @@
 class Group < ApplicationRecord
-  has_many :lessons
-  belongs_to :user
   has_one :speciality
 
 

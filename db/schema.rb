@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403203111) do
+ActiveRecord::Schema.define(version: 20180416213510) do
 
   create_table "faculties", force: :cascade do |t|
     t.string "title"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20180403203111) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
+    t.integer "faculty_id"
+    t.index ["faculty_id"], name: "index_groups_on_faculty_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -50,6 +52,7 @@ ActiveRecord::Schema.define(version: 20180403203111) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
+    t.boolean "teacher", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index [nil], name: "index_users_on_reset_password_token", unique: true
