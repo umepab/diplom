@@ -1,0 +1,33 @@
+
+
+
+<table class="tbglav" width="40%">
+
+  <% @schedules.each_with_index do |sched, index| %>
+
+
+
+
+  <tr valign="top">
+    <td width="2%" rowspan="6" align="center" valign="middle"><%=index+1 %><%= sched.day %></td>
+  </tr>
+  <% end %>
+
+  <tr valign="top">
+    <td>Защита информации</td>
+  </tr>
+
+  <tr valign="top">
+    <td>Сети</td>
+  </tr>
+  <tr valign="top">
+    <td>Системное программирование</td>
+  </tr>
+  <tr valign="top">
+    <td>Периферийные утройста</td>
+  </tr>
+  <tr valign="top">
+    <td>Java</td>
+  </tr>
+
+</table>

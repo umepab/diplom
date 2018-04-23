@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :groups
   resources :specialities
   resources :faculties
+  resources :schedules
 
 
 
